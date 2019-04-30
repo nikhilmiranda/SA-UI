@@ -78,6 +78,12 @@ hotel3_average=[]
 hotel4_average=[]
 list1=["hotel1","hotel2","hotel3","hotel4"]
 list2=["affordability","amenities","cleanliness","customer_support","food","location","quietness","staff","view","payment","wifi"]
+
+def newmethod408():
+    print("----------------------")
+    print(p)
+    print("-------------------")
+
 for i in list1:
     for j in list2:
         file = open(i+"_"+j+".txt", "r", encoding="utf-8") 
@@ -90,6 +96,7 @@ for i in list1:
             predicted=clf.predict(t)
             if predicted==1:
                 p=p+1
+                newmethod408()
         average_sentiment[i+"_"+j]=round((p/c)*100,2)
         file.close()
   
